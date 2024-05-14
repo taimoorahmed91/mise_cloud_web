@@ -5,7 +5,7 @@
 session_start();
 
 // Database connection parameters
-$host = "localhost";
+$host = "database";
 $username = "root";
 $password = "C1sc0123@";
 $database = "mise";

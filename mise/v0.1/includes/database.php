@@ -1,6 +1,6 @@
 <?php
 //Connect to Database
-$db_host = 'localhost';
+$db_host = 'database';
 $db_name = 'mise';
 $db_user = 'root';
 $db_pass = 'C1sc0123@';
