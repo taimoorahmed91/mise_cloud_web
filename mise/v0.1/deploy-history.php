@@ -1,9 +1,6 @@
 <?php include('includes/database.php'); ?>
 <?php include('tracker.php'); ?>
 
-
-
-
 <?php
 
 // Define the number of rows per page

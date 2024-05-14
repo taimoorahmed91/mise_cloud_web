@@ -1,8 +1,7 @@
-<?php include('includes/database.php'); ?>
-<?php include('tracker.php'); ?>
-
-
 <?php
+
+// Include database connection
+include('includes/database.php');
 
 // Assign get variable
 $id = $_GET['id'];
@@ -22,7 +21,8 @@ if ($result = $mysqli->query($query)) {
     $result->close();
 }
 
-$command = "sudo -S python3 /root/ise-landscape/mise/verify_deployment.py '$fqdn'";
+// Command to execute inside the Python container
+$command = "sudo -S docker exec misepy python3 /root/ise-landscape/mise/verify_deployment.py '$fqdn'";
 $output = shell_exec($command);
 
 // Set default alert class and message

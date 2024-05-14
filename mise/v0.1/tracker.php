@@ -1,5 +1,5 @@
-<?php include('includes/database.php'); ?>
 <?php
+ob_start();
 session_start();
 
 $username = $_SESSION["username"];

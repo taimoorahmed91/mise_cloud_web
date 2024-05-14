@@ -1,5 +1,6 @@
-<?php 
-include('includes/database.php'); 
+<?php
+
+include('includes/database.php');
 include('tracker.php');
 
 session_start();
@@ -23,10 +24,10 @@ if (!isset($_SESSION["username"]) || !isset($_SESSION["role"])) {
 if (isset($_GET['id'])) {
     $fid = escapeshellarg($_GET['id']); // Escape the argument to prevent command injection
 
-    // Construct the command
-    $command = "sudo -S python3 /root/ise-landscape/mise/overlap.py " . $fid;
+    // Command to execute inside the Python container
+    $command = "sudo -S docker exec misepy python3 /root/ise-landscape/mise/overlap.py $fid";
 
-    // Execute the command
+    // Execute command using shell_exec
     system($command, $retval);
 
     // $retval is the return value of the executed command, 0 usually means success

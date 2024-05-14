@@ -2,30 +2,33 @@
 <?php include('tracker.php'); ?>
 
 <?php
-  if($_POST){
-    //Get variables from post array
-          $username = $_POST['username'];
-          $password = $_POST['password'];
-          $radkitid = $_POST['radkitid'];
+if($_POST){
+    // Include database connection
+    include('includes/database.php');
 
-    
-    //Create customer query
- 
-    $query ="UPDATE `credentials` SET `username` = '$username' , `password` = '$password' , `radkitid` = '$radkitid'  WHERE `credentials`.`id` = 1;";
-    //Run query
+    // Get variables from POST array
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $radkitid = $_POST['radkitid'];
+
+    // Create customer query
+    $query = "UPDATE `credentials` SET `username` = '$username', `password` = '$password', `radkitid` = '$radkitid' WHERE `credentials`.`id` = 1;";
+
+    // Run query
     $mysqli->query($query);
 
-    // Execute Python script with sudo
-    $pythonScriptPath = '/root/ise-landscape/mise/headers.py';
-    $pythonCommand = "sudo -S python3 $pythonScriptPath";
-    $output = shell_exec($pythonCommand);
-    
-    
-    $msg='Entry Added';
+    // Command to execute inside the Python container
+    $command = "sudo -S docker exec misepy python3 /root/ise-landscape/mise/headers.py";
+
+    // Execute command using shell_exec
+    shell_exec($command);
+
+    $msg = 'Entry Added';
     header('Location: dashboard.php');
     exit;
-    }
+}
 ?>
+
 
 <?php
 session_start();

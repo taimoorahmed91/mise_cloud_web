@@ -1,13 +1,15 @@
-<?php include('includes/database.php'); ?>
-<?php include('tracker.php'); ?>
-
 <?php
 
-// Assign get variable
+// Include database connection
+include('includes/database.php');
+include('tracker.php');
 
-// Create the select query
+// Assign get variable (Not used in this script)
 
-$command = "sudo -S python3 /root/ise-landscape/mise/repo-check.py";
+// Command to execute inside the Python container
+$command = "sudo -S docker exec misepy python3 /root/ise-landscape/mise/repo-check.py";
+
+// Execute command using shell_exec
 $output = shell_exec($command);
 
 // Set default alert class and message
@@ -23,6 +25,7 @@ if (strpos($output, "SFTP connection successful!") !== false) {
     $alertMessage = 'SFTP connection failed.';
 }
 
+// Output JavaScript alert and redirect
 echo '<script>
     setTimeout(function() {
         alert("' . $alertMessage . '");
