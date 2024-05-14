@@ -263,16 +263,16 @@ $percentage_total = $percentage_ap + $percentage_dacl + $percentage_authz + $per
 <?php
 
 
-$ap_value = round(($percentage_ap / $percentage_total) * 100);
-$dacl_value = round(($percentage_dacl / $percentage_total) * 100);
-$authz_value = round(($percentage_authz / $percentage_total) * 100);
-$sgt_value = round(($percentage_sgt / $percentage_total) * 100);
-$nad_value = round(($percentage_nad / $percentage_total) * 100);
-$policyset_value = round(($percentage_policyset / $percentage_total) * 100);
-$authentication_value = round(($percentage_authentication / $percentage_total) * 100);
-$authorization_value = round(($percentage_authorization / $percentage_total) * 100);
-$cube_value= round(($cubes_fetched / $cubes) * 100);
-$cubes_reachable_value = round(($cubes_reachable / $cubes) * 100);
+$ap_value = $percentage_total != 0 ? round(($percentage_ap / $percentage_total) * 100) : 0;
+$dacl_value = $percentage_total != 0 ? round(($percentage_dacl / $percentage_total) * 100) : 0;
+$authz_value = $percentage_total != 0 ? round(($percentage_authz / $percentage_total) * 100) : 0;
+$sgt_value = $percentage_total != 0 ? round(($percentage_sgt / $percentage_total) * 100) : 0;
+$nad_value = $percentage_total != 0 ? round(($percentage_nad / $percentage_total) * 100) : 0;
+$policyset_value = $percentage_total != 0 ? round(($percentage_policyset / $percentage_total) * 100) : 0;
+$authentication_value = $percentage_total != 0 ? round(($percentage_authentication / $percentage_total) * 100) : 0;
+$authorization_value = $percentage_total != 0 ? round(($percentage_authorization / $percentage_total) * 100) : 0;
+$cube_value = $cubes != 0 ? round(($cubes_fetched / $cubes) * 100) : 0;
+$cubes_reachable_value = $cubes != 0 ? round(($cubes_reachable / $cubes) * 100) : 0;
 ?>
 
 
