@@ -1,0 +1,809 @@
+2023-05-18 17:28:43
+{
+  "version" : "1.0.0",
+  "response" : {
+    "rule" : {
+      "default" : false,
+      "id" : "246f9545-bbb8-4f6b-96db-9aa8029e63f3",
+      "name" : "Policy-Set-1",
+      "hitCounts" : 0,
+      "rank" : 0,
+      "state" : "enabled",
+      "condition" : {
+        "link" : null,
+        "conditionType" : "ConditionAttributes",
+        "isNegate" : false,
+        "dictionaryName" : "Radius",
+        "attributeName" : "Called-Station-ID",
+        "operator" : "equals",
+        "dictionaryValue" : null,
+        "attributeValue" : "SSID-1"
+      }
+    },
+    "identitySourceName" : "ADJoin",
+    "ifAuthFail" : "REJECT",
+    "ifUserNotFound" : "REJECT",
+    "ifProcessFail" : "DROP",
+    "link" : {
+      "rel" : "self",
+      "href" : "https://ise32.taimoorlab.local/api/v1/policy/network-access/policy-set/b35c7c59-070e-43ec-b9d3-3ab84bf60e4c/authentication/246f9545-bbb8-4f6b-96db-9aa8029e63f3",
+      "type" : "application/json"
+    }
+  }
+}2023-05-18 18:07:18
+{
+  "version" : "1.0.0",
+  "response" : {
+    "rule" : {
+      "default" : false,
+      "id" : "7a1508cb-1590-4df1-b32c-cddcfa244b3e",
+      "name" : "Policy-Set-2",
+      "hitCounts" : 0,
+      "rank" : 1,
+      "state" : "enabled",
+      "condition" : {
+        "link" : null,
+        "conditionType" : "ConditionAttributes",
+        "isNegate" : false,
+        "dictionaryName" : "Radius",
+        "attributeName" : "Called-Station-ID",
+        "operator" : "equals",
+        "dictionaryValue" : null,
+        "attributeValue" : "SSID-2"
+      }
+    },
+    "identitySourceName" : "ADJoin",
+    "ifAuthFail" : "REJECT",
+    "ifUserNotFound" : "REJECT",
+    "ifProcessFail" : "DROP",
+    "link" : {
+      "rel" : "self",
+      "href" : "https://ise32.taimoorlab.local/api/v1/policy/network-access/policy-set/b35c7c59-070e-43ec-b9d3-3ab84bf60e4c/authentication/7a1508cb-1590-4df1-b32c-cddcfa244b3e",
+      "type" : "application/json"
+    }
+  }
+}2023-05-18 18:13:32
+{
+  "version" : "1.0.0",
+  "response" : {
+    "rule" : {
+      "default" : false,
+      "id" : "061da54d-4993-4543-be19-19ec2dcd8bd4",
+      "name" : "Policy-Set-4",
+      "hitCounts" : 0,
+      "rank" : 3,
+      "state" : "enabled",
+      "condition" : {
+        "link" : null,
+        "conditionType" : "ConditionAttributes",
+        "isNegate" : false,
+        "dictionaryName" : "Radius",
+        "attributeName" : "Called-Station-ID",
+        "operator" : "equals",
+        "dictionaryValue" : null,
+        "attributeValue" : "SSID-4"
+      }
+    },
+    "identitySourceName" : "ADJoin",
+    "ifAuthFail" : "REJECT",
+    "ifUserNotFound" : "REJECT",
+    "ifProcessFail" : "DROP",
+    "link" : {
+      "rel" : "self",
+      "href" : "https://ise32.taimoorlab.local/api/v1/policy/network-access/policy-set/b35c7c59-070e-43ec-b9d3-3ab84bf60e4c/authentication/061da54d-4993-4543-be19-19ec2dcd8bd4",
+      "type" : "application/json"
+    }
+  }
+}2023-05-22 20:40:37
+{
+  "version" : "1.0.0",
+  "response" : {
+    "rule" : {
+      "default" : false,
+      "id" : "7a1508cb-1590-4df1-b32c-cddcfa244b3e",
+      "name" : "Authentication Rule 2",
+      "hitCounts" : 0,
+      "rank" : 1,
+      "state" : "enabled",
+      "condition" : {
+        "link" : null,
+        "conditionType" : "ConditionAndBlock",
+        "isNegate" : false,
+        "children" : [ {
+          "link" : null,
+          "conditionType" : "ConditionAttributes",
+          "isNegate" : false,
+          "dictionaryName" : "Radius",
+          "attributeName" : "Called-Station-ID",
+          "operator" : "equals",
+          "dictionaryValue" : null,
+          "attributeValue" : "SSID-2"
+        }, {
+          "link" : null,
+          "conditionType" : "ConditionAttributes",
+          "isNegate" : false,
+          "dictionaryName" : "Radius",
+          "attributeName" : "Called-Station-ID",
+          "operator" : "equals",
+          "dictionaryValue" : null,
+          "attributeValue" : "SSID-6"
+        } ]
+      }
+    },
+    "identitySourceName" : "ADJoin",
+    "ifAuthFail" : "REJECT",
+    "ifUserNotFound" : "REJECT",
+    "ifProcessFail" : "DROP",
+    "link" : {
+      "rel" : "self",
+      "href" : "https://ise32.taimoorlab.local/api/v1/policy/network-access/policy-set/b35c7c59-070e-43ec-b9d3-3ab84bf60e4c/authentication/7a1508cb-1590-4df1-b32c-cddcfa244b3e",
+      "type" : "application/json"
+    }
+  }
+}2023-06-03 01:01:08
+{
+  "code" : "400",
+  "message" : "Failed to handle API - Network Access Authentication Rule : Rule name is already used in this policy table: ASA VPN RADIUS"
+}2023-06-03 01:01:46
+{
+  "code" : "400",
+  "message" : "Failed to handle API - Network Access Authentication Rule : Rule name is already used in this policy table: ASA VPN RADIUS"
+}2023-06-03 01:02:22
+{
+  "version" : "1.0.0",
+  "response" : {
+    "rule" : {
+      "default" : false,
+      "id" : "56c8fc37-b386-4444-8535-7fe0e4327c92",
+      "name" : "ASA VPN RADIUS",
+      "hitCounts" : 0,
+      "rank" : 0,
+      "state" : "enabled",
+      "condition" : {
+        "link" : null,
+        "conditionType" : "ConditionAttributes",
+        "isNegate" : false,
+        "dictionaryName" : "DEVICE",
+        "attributeName" : "Device Type",
+        "operator" : "equals",
+        "dictionaryValue" : null,
+        "attributeValue" : "All Device Types#ASA"
+      }
+    },
+    "identitySourceName" : "AD_Jump",
+    "ifAuthFail" : "REJECT",
+    "ifUserNotFound" : "REJECT",
+    "ifProcessFail" : "DROP",
+    "link" : {
+      "rel" : "self",
+      "href" : "https://ise-demo1.taimoorlab.local/api/v1/policy/network-access/policy-set/1ea721ab-8ace-481e-80dd-914fb13d1fd2/authentication/56c8fc37-b386-4444-8535-7fe0e4327c92",
+      "type" : "application/json"
+    }
+  }
+}2023-06-04 19:36:11
+{
+  "version" : "1.0.0",
+  "response" : {
+    "rule" : {
+      "default" : false,
+      "id" : "3afd778b-3f6d-46aa-9cf7-0a4afb1e5621",
+      "name" : "Authentication Rule 1",
+      "hitCounts" : 0,
+      "rank" : 0,
+      "state" : "enabled",
+      "condition" : {
+        "link" : null,
+        "conditionType" : "ConditionOrBlock",
+        "isNegate" : false,
+        "children" : [ {
+          "link" : null,
+          "conditionType" : "ConditionAttributes",
+          "isNegate" : false,
+          "dictionaryName" : "Radius",
+          "attributeName" : "Called-Station-ID",
+          "operator" : "equals",
+          "dictionaryValue" : null,
+          "attributeValue" : "SSID-1"
+        }, {
+          "link" : null,
+          "conditionType" : "ConditionAttributes",
+          "isNegate" : false,
+          "dictionaryName" : "Radius",
+          "attributeName" : "Called-Station-ID",
+          "operator" : "equals",
+          "dictionaryValue" : null,
+          "attributeValue" : "SSID-4"
+        } ]
+      }
+    },
+    "identitySourceName" : "ADJoin",
+    "ifAuthFail" : "REJECT",
+    "ifUserNotFound" : "REJECT",
+    "ifProcessFail" : "DROP",
+    "link" : {
+      "rel" : "self",
+      "href" : "https://ise-demo1.taimoorlab.local/api/v1/policy/network-access/policy-set/6c9d3bf9-51e5-47a3-aba4-edd524a7165e/authentication/3afd778b-3f6d-46aa-9cf7-0a4afb1e5621",
+      "type" : "application/json"
+    }
+  }
+}2023-06-05 14:00:23
+{
+  "version" : "1.0.0",
+  "response" : {
+    "rule" : {
+      "default" : false,
+      "id" : "041ae1d3-c4a8-43fd-9253-c7b43eff26b4",
+      "name" : "Authentication Rule 5",
+      "hitCounts" : 0,
+      "rank" : 0,
+      "state" : "enabled",
+      "condition" : {
+        "link" : null,
+        "conditionType" : "ConditionAttributes",
+        "isNegate" : false,
+        "dictionaryName" : "Radius",
+        "attributeName" : "Called-Station-ID",
+        "operator" : "equals",
+        "dictionaryValue" : null,
+        "attributeValue" : "SSID-5"
+      }
+    },
+    "identitySourceName" : "ADJoin",
+    "ifAuthFail" : "REJECT",
+    "ifUserNotFound" : "REJECT",
+    "ifProcessFail" : "DROP",
+    "link" : {
+      "rel" : "self",
+      "href" : "https://ise32.taimoorlab.local/api/v1/policy/network-access/policy-set/2fc07c49-3fcb-4d4b-a52f-bfed6da23226/authentication/041ae1d3-c4a8-43fd-9253-c7b43eff26b4",
+      "type" : "application/json"
+    }
+  }
+}2023-06-05 20:14:02
+{
+  "version" : "1.0.0",
+  "response" : {
+    "rule" : {
+      "default" : false,
+      "id" : "c4dcde53-2c0d-4b95-814a-1f8131d8a979",
+      "name" : "Policy-Set-1",
+      "hitCounts" : 0,
+      "rank" : 0,
+      "state" : "enabled",
+      "condition" : {
+        "link" : null,
+        "conditionType" : "ConditionAttributes",
+        "isNegate" : false,
+        "dictionaryName" : "Radius",
+        "attributeName" : "Called-Station-ID",
+        "operator" : "equals",
+        "dictionaryValue" : null,
+        "attributeValue" : "SSID-1"
+      }
+    },
+    "identitySourceName" : "ADJoin",
+    "ifAuthFail" : "REJECT",
+    "ifUserNotFound" : "REJECT",
+    "ifProcessFail" : "DROP",
+    "link" : {
+      "rel" : "self",
+      "href" : "https://ise-demo1.taimoorlab.local/api/v1/policy/network-access/policy-set/68d2093d-25dd-4ab7-a522-5f0a54f429eb/authentication/c4dcde53-2c0d-4b95-814a-1f8131d8a979",
+      "type" : "application/json"
+    }
+  }
+}2023-06-05 21:08:07
+{
+  "version" : "1.0.0",
+  "response" : {
+    "rule" : {
+      "default" : false,
+      "id" : "1b4aa6ea-9aaa-4867-8f31-fafb7d17ae7c",
+      "name" : "Policy-Set-2",
+      "hitCounts" : 0,
+      "rank" : 0,
+      "state" : "enabled",
+      "condition" : {
+        "link" : null,
+        "conditionType" : "ConditionAttributes",
+        "isNegate" : false,
+        "dictionaryName" : "Radius",
+        "attributeName" : "Called-Station-ID",
+        "operator" : "equals",
+        "dictionaryValue" : null,
+        "attributeValue" : "SSID-2"
+      }
+    },
+    "identitySourceName" : "ADJoin",
+    "ifAuthFail" : "REJECT",
+    "ifUserNotFound" : "REJECT",
+    "ifProcessFail" : "DROP",
+    "link" : {
+      "rel" : "self",
+      "href" : "https://ise-demo1.taimoorlab.local/api/v1/policy/network-access/policy-set/68d2093d-25dd-4ab7-a522-5f0a54f429eb/authentication/1b4aa6ea-9aaa-4867-8f31-fafb7d17ae7c",
+      "type" : "application/json"
+    }
+  }
+}2023-06-12 22:36:14
+{
+  "code" : "400",
+  "message" : "Failed to handle API - Network Access Authentication Rule : Rule name is already used in this policy table: Authentication Rule 1"
+}2023-06-12 22:44:50
+{
+  "version" : "1.0.0",
+  "response" : {
+    "rule" : {
+      "default" : false,
+      "id" : "340e51c3-b492-4248-8d86-b227f7ee20e3",
+      "name" : "Authentication Rule 1",
+      "hitCounts" : 0,
+      "rank" : 0,
+      "state" : "enabled",
+      "condition" : {
+        "link" : null,
+        "conditionType" : "ConditionOrBlock",
+        "isNegate" : false,
+        "children" : [ {
+          "link" : null,
+          "conditionType" : "ConditionAttributes",
+          "isNegate" : false,
+          "dictionaryName" : "Radius",
+          "attributeName" : "Called-Station-ID",
+          "operator" : "equals",
+          "dictionaryValue" : null,
+          "attributeValue" : "SSID-1"
+        }, {
+          "link" : null,
+          "conditionType" : "ConditionAttributes",
+          "isNegate" : false,
+          "dictionaryName" : "Radius",
+          "attributeName" : "Called-Station-ID",
+          "operator" : "equals",
+          "dictionaryValue" : null,
+          "attributeValue" : "SSID-4"
+        } ]
+      }
+    },
+    "identitySourceName" : "ADJoin",
+    "ifAuthFail" : "REJECT",
+    "ifUserNotFound" : "REJECT",
+    "ifProcessFail" : "DROP",
+    "link" : {
+      "rel" : "self",
+      "href" : "https://ise-demo1.taimoorlab.local/api/v1/policy/network-access/policy-set/68d2093d-25dd-4ab7-a522-5f0a54f429eb/authentication/340e51c3-b492-4248-8d86-b227f7ee20e3",
+      "type" : "application/json"
+    }
+  }
+}2023-07-08 23:43:57
+{
+  "code" : "400",
+  "message" : "Failed to handle API - Network Access Authentication Rule : Rule name is already used in this policy table: Authentication Rule 1"
+}2023-07-09 00:30:52
+{
+  "version" : "1.0.0",
+  "response" : {
+    "rule" : {
+      "default" : false,
+      "id" : "8a745995-ec7f-455f-87b5-d8eb9c86e49b",
+      "name" : "Authentication Rule 1",
+      "hitCounts" : 0,
+      "rank" : 0,
+      "state" : "enabled",
+      "condition" : {
+        "link" : null,
+        "conditionType" : "ConditionOrBlock",
+        "isNegate" : false,
+        "children" : [ {
+          "link" : null,
+          "conditionType" : "ConditionAttributes",
+          "isNegate" : false,
+          "dictionaryName" : "Radius",
+          "attributeName" : "Called-Station-ID",
+          "operator" : "equals",
+          "dictionaryValue" : null,
+          "attributeValue" : "SSID-1"
+        }, {
+          "link" : null,
+          "conditionType" : "ConditionAttributes",
+          "isNegate" : false,
+          "dictionaryName" : "Radius",
+          "attributeName" : "Called-Station-ID",
+          "operator" : "equals",
+          "dictionaryValue" : null,
+          "attributeValue" : "SSID-4"
+        } ]
+      }
+    },
+    "identitySourceName" : "ADJoin",
+    "ifAuthFail" : "REJECT",
+    "ifUserNotFound" : "REJECT",
+    "ifProcessFail" : "DROP",
+    "link" : {
+      "rel" : "self",
+      "href" : "https://ise32.taimoorlab.local/api/v1/policy/network-access/policy-set/fa6e47a3-fe9f-47e5-a853-df82e93ff1c5/authentication/8a745995-ec7f-455f-87b5-d8eb9c86e49b",
+      "type" : "application/json"
+    }
+  }
+}2023-08-08 17:23:39
+{
+  "code" : "400",
+  "message" : "Failed to handle API - Network Access Authentication Rule : Invalid Rank for rule.: ASA VPN RADIUS. Rank=1. Must be in range between 0 and 0"
+}2023-08-08 17:31:18
+{
+  "version" : "1.0.0",
+  "response" : {
+    "rule" : {
+      "default" : false,
+      "id" : "28586909-4701-47e4-a84f-dcfc5100ab96",
+      "name" : "Authentication Rule 1",
+      "hitCounts" : 0,
+      "rank" : 0,
+      "state" : "enabled",
+      "condition" : {
+        "link" : null,
+        "conditionType" : "ConditionOrBlock",
+        "isNegate" : false,
+        "children" : [ {
+          "link" : null,
+          "conditionType" : "ConditionAttributes",
+          "isNegate" : false,
+          "dictionaryName" : "Radius",
+          "attributeName" : "Called-Station-ID",
+          "operator" : "equals",
+          "dictionaryValue" : null,
+          "attributeValue" : "SSID-1"
+        }, {
+          "link" : null,
+          "conditionType" : "ConditionAttributes",
+          "isNegate" : false,
+          "dictionaryName" : "Radius",
+          "attributeName" : "Called-Station-ID",
+          "operator" : "equals",
+          "dictionaryValue" : null,
+          "attributeValue" : "SSID-4"
+        } ]
+      }
+    },
+    "identitySourceName" : "ADJoin",
+    "ifAuthFail" : "REJECT",
+    "ifUserNotFound" : "REJECT",
+    "ifProcessFail" : "DROP",
+    "link" : {
+      "rel" : "self",
+      "href" : "https://ise32.taimoorlab.local/api/v1/policy/network-access/policy-set/6b302e7b-0c90-4c38-b36e-50a894fa5b6d/authentication/28586909-4701-47e4-a84f-dcfc5100ab96",
+      "type" : "application/json"
+    }
+  }
+}2023-08-08 17:35:36
+{
+  "code" : "400",
+  "message" : "Failed to handle API - Network Access Authentication Rule : Rule name is already used in this policy table: Authentication Rule 1"
+}2023-08-08 17:36:54
+{
+  "code" : "400",
+  "message" : "Failed to handle API - Network Access Authentication Rule : Rule name is already used in this policy table: Authentication Rule 1"
+}2023-08-08 17:37:04
+{
+  "code" : "400",
+  "message" : "Failed to handle API - Network Access Authentication Rule : Rule name is already used in this policy table: Authentication Rule 1"
+}2023-08-08 17:38:03
+{
+  "code" : "400",
+  "message" : "Failed to handle API - Network Access Authentication Rule : Rule name is already used in this policy table: Authentication Rule 1"
+}2023-08-08 17:38:17
+{
+  "version" : "1.0.0",
+  "response" : {
+    "rule" : {
+      "default" : false,
+      "id" : "989409cc-7abb-4a13-bc59-5877c3e61a71",
+      "name" : "Authentication Rule 1",
+      "hitCounts" : 0,
+      "rank" : 0,
+      "state" : "enabled",
+      "condition" : {
+        "link" : null,
+        "conditionType" : "ConditionOrBlock",
+        "isNegate" : false,
+        "children" : [ {
+          "link" : null,
+          "conditionType" : "ConditionAttributes",
+          "isNegate" : false,
+          "dictionaryName" : "Radius",
+          "attributeName" : "Called-Station-ID",
+          "operator" : "equals",
+          "dictionaryValue" : null,
+          "attributeValue" : "SSID-1"
+        }, {
+          "link" : null,
+          "conditionType" : "ConditionAttributes",
+          "isNegate" : false,
+          "dictionaryName" : "Radius",
+          "attributeName" : "Called-Station-ID",
+          "operator" : "equals",
+          "dictionaryValue" : null,
+          "attributeValue" : "SSID-4"
+        } ]
+      }
+    },
+    "identitySourceName" : "ADJoin",
+    "ifAuthFail" : "REJECT",
+    "ifUserNotFound" : "REJECT",
+    "ifProcessFail" : "DROP",
+    "link" : {
+      "rel" : "self",
+      "href" : "https://ise32.taimoorlab.local/api/v1/policy/network-access/policy-set/6b302e7b-0c90-4c38-b36e-50a894fa5b6d/authentication/989409cc-7abb-4a13-bc59-5877c3e61a71",
+      "type" : "application/json"
+    }
+  }
+}2023-08-08 17:40:27
+{
+  "code" : "400",
+  "message" : "Failed to handle API - Network Access Authentication Rule : Rule name is already used in this policy table: Authentication Rule 1"
+}2023-08-08 17:42:11
+{
+  "version" : "1.0.0",
+  "response" : {
+    "rule" : {
+      "default" : false,
+      "id" : "cb01935a-77a5-4002-8c43-d38626ca96f0",
+      "name" : "Authentication Rule 1",
+      "hitCounts" : 0,
+      "rank" : 0,
+      "state" : "enabled",
+      "condition" : {
+        "link" : null,
+        "conditionType" : "ConditionOrBlock",
+        "isNegate" : false,
+        "children" : [ {
+          "link" : null,
+          "conditionType" : "ConditionAttributes",
+          "isNegate" : false,
+          "dictionaryName" : "Radius",
+          "attributeName" : "Called-Station-ID",
+          "operator" : "equals",
+          "dictionaryValue" : null,
+          "attributeValue" : "SSID-1"
+        }, {
+          "link" : null,
+          "conditionType" : "ConditionAttributes",
+          "isNegate" : false,
+          "dictionaryName" : "Radius",
+          "attributeName" : "Called-Station-ID",
+          "operator" : "equals",
+          "dictionaryValue" : null,
+          "attributeValue" : "SSID-4"
+        } ]
+      }
+    },
+    "identitySourceName" : "ADJoin",
+    "ifAuthFail" : "REJECT",
+    "ifUserNotFound" : "REJECT",
+    "ifProcessFail" : "DROP",
+    "link" : {
+      "rel" : "self",
+      "href" : "https://ise32.taimoorlab.local/api/v1/policy/network-access/policy-set/fa6e47a3-fe9f-47e5-a853-df82e93ff1c5/authentication/cb01935a-77a5-4002-8c43-d38626ca96f0",
+      "type" : "application/json"
+    }
+  }
+}2023-08-08 17:43:30
+{
+  "code" : "400",
+  "message" : "Failed to handle API - Network Access Authentication Rule : Invalid Rank for rule.: Authentication Rule 5. Rank=4. Must be in range between 0 and 3"
+}2023-08-10 18:01:04
+{
+  "code" : "400",
+  "message" : "Failed to handle API - Network Access Authentication Rule : One of Authentication Rule Options contains illegal value, allowed values are: REJECT, DROP, CONTINUE"
+}2023-08-10 18:03:40
+{
+  "version" : "1.0.0",
+  "response" : {
+    "rule" : {
+      "default" : false,
+      "id" : "afbd0df4-6e4b-4e6a-93a1-3bc0d37149e9",
+      "name" : "Dot1X",
+      "hitCounts" : 0,
+      "rank" : 0,
+      "state" : "enabled",
+      "condition" : {
+        "link" : null,
+        "conditionType" : "ConditionOrBlock",
+        "isNegate" : false,
+        "children" : [ {
+          "link" : null,
+          "conditionType" : "ConditionReference",
+          "isNegate" : false,
+          "name" : "Wired_802.1X",
+          "id" : "99bf9d38-62c7-4e31-a1af-c54ae8147d1e",
+          "description" : "A condition to match 802.1X based authentication requests from switches, according to the corresponding 802.1x attributes defined in the device profile."
+        }, {
+          "link" : null,
+          "conditionType" : "ConditionReference",
+          "isNegate" : false,
+          "name" : "Wireless_802.1X",
+          "id" : "883d379e-e873-4e42-a019-55e64ac31fcf",
+          "description" : "A condition to match 802.1X based authentication requests from wireless LAN controllers, according to the corresponding 802.1x attributes defined in the device profile."
+        } ]
+      }
+    },
+    "identitySourceName" : "All_User_ID_Stores",
+    "ifAuthFail" : "REJECT",
+    "ifUserNotFound" : "REJECT",
+    "ifProcessFail" : "DROP",
+    "link" : {
+      "rel" : "self",
+      "href" : "https://ise32.taimoorlab.local/api/v1/policy/network-access/policy-set/68868b3f-3254-45a3-822a-0803f4eed86c/authentication/afbd0df4-6e4b-4e6a-93a1-3bc0d37149e9",
+      "type" : "application/json"
+    }
+  }
+}2023-09-06 07:50:04
+{
+  "code" : "400",
+  "message" : "Failed to handle API - Network Access Authentication Rule : Authentication rule result DenyAccess doesn't exist"
+}2023-09-06 07:50:10
+{
+  "code" : "400",
+  "message" : "Failed to handle API - Network Access Authentication Rule : Authentication rule result DenyAccess doesn't exist"
+}2023-12-03 18:03:39
+{
+  "version" : "1.0.0",
+  "response" : {
+    "rule" : {
+      "default" : false,
+      "id" : "00d1f784-b2c1-4edb-a957-3d994f63962a",
+      "name" : "Authentication Rule 2",
+      "hitCounts" : 0,
+      "rank" : 0,
+      "state" : "enabled",
+      "condition" : {
+        "link" : null,
+        "conditionType" : "ConditionReference",
+        "isNegate" : false,
+        "name" : "Wired_MAB",
+        "id" : "788f24e8-af00-4c6c-80ed-ad9dd3ce17cd",
+        "description" : "A condition to match MAC Authentication Bypass service based authentication requests from switches, according to the corresponding MAB attributes defined in the device profile."
+      }
+    },
+    "identitySourceName" : "AD",
+    "ifAuthFail" : "REJECT",
+    "ifUserNotFound" : "REJECT",
+    "ifProcessFail" : "DROP",
+    "link" : {
+      "rel" : "self",
+      "href" : "https://10.48.30.75/api/v1/policy/network-access/policy-set/97d94df3-7723-4b22-9001-9c244e2c812b/authentication/00d1f784-b2c1-4edb-a957-3d994f63962a",
+      "type" : "application/json"
+    }
+  }
+}2023-12-03 18:03:40
+{
+  "version" : "1.0.0",
+  "response" : {
+    "rule" : {
+      "default" : false,
+      "id" : "b3ad88b4-7ed7-4c69-bd0d-0f1f51ef1f32",
+      "name" : "Authentication Rule 3",
+      "hitCounts" : 0,
+      "rank" : 0,
+      "state" : "enabled",
+      "condition" : {
+        "link" : null,
+        "conditionType" : "ConditionReference",
+        "isNegate" : false,
+        "name" : "Wired_MAB",
+        "id" : "788f24e8-af00-4c6c-80ed-ad9dd3ce17cd",
+        "description" : "A condition to match MAC Authentication Bypass service based authentication requests from switches, according to the corresponding MAB attributes defined in the device profile."
+      }
+    },
+    "identitySourceName" : "AD",
+    "ifAuthFail" : "REJECT",
+    "ifUserNotFound" : "REJECT",
+    "ifProcessFail" : "DROP",
+    "link" : {
+      "rel" : "self",
+      "href" : "https://10.48.30.75/api/v1/policy/network-access/policy-set/97d94df3-7723-4b22-9001-9c244e2c812b/authentication/b3ad88b4-7ed7-4c69-bd0d-0f1f51ef1f32",
+      "type" : "application/json"
+    }
+  }
+}2023-12-03 18:03:40
+{
+  "version" : "1.0.0",
+  "response" : {
+    "rule" : {
+      "default" : false,
+      "id" : "e83aa88c-6766-4ef5-9368-d339fd1e89c7",
+      "name" : "Authentication Rule 4",
+      "hitCounts" : 0,
+      "rank" : 0,
+      "state" : "enabled",
+      "condition" : {
+        "link" : null,
+        "conditionType" : "ConditionReference",
+        "isNegate" : false,
+        "name" : "Wired_MAB",
+        "id" : "788f24e8-af00-4c6c-80ed-ad9dd3ce17cd",
+        "description" : "A condition to match MAC Authentication Bypass service based authentication requests from switches, according to the corresponding MAB attributes defined in the device profile."
+      }
+    },
+    "identitySourceName" : "AD",
+    "ifAuthFail" : "REJECT",
+    "ifUserNotFound" : "REJECT",
+    "ifProcessFail" : "DROP",
+    "link" : {
+      "rel" : "self",
+      "href" : "https://10.48.30.75/api/v1/policy/network-access/policy-set/97d94df3-7723-4b22-9001-9c244e2c812b/authentication/e83aa88c-6766-4ef5-9368-d339fd1e89c7",
+      "type" : "application/json"
+    }
+  }
+}2023-12-03 18:03:41
+{
+  "version" : "1.0.0",
+  "response" : {
+    "rule" : {
+      "default" : false,
+      "id" : "52ee6a0f-afa2-47c1-8874-ade6c17c367e",
+      "name" : "Authentication Rule 5",
+      "hitCounts" : 0,
+      "rank" : 0,
+      "state" : "enabled",
+      "condition" : {
+        "link" : null,
+        "conditionType" : "ConditionReference",
+        "isNegate" : false,
+        "name" : "Wired_MAB",
+        "id" : "788f24e8-af00-4c6c-80ed-ad9dd3ce17cd",
+        "description" : "A condition to match MAC Authentication Bypass service based authentication requests from switches, according to the corresponding MAB attributes defined in the device profile."
+      }
+    },
+    "identitySourceName" : "AD",
+    "ifAuthFail" : "REJECT",
+    "ifUserNotFound" : "REJECT",
+    "ifProcessFail" : "DROP",
+    "link" : {
+      "rel" : "self",
+      "href" : "https://10.48.30.75/api/v1/policy/network-access/policy-set/97d94df3-7723-4b22-9001-9c244e2c812b/authentication/52ee6a0f-afa2-47c1-8874-ade6c17c367e",
+      "type" : "application/json"
+    }
+  }
+}2023-12-03 19:46:22
+{
+  "code" : "400",
+  "message" : "Failed to handle API - Network Access Authentication Rule : Condition with specified ID was not found in DB: 788f24e8-af00-4c6c-80ed-ad9dd3ce17cd"
+}2023-12-03 19:46:23
+{
+  "code" : "400",
+  "message" : "Failed to handle API - Network Access Authentication Rule : Condition with specified ID was not found in DB: 788f24e8-af00-4c6c-80ed-ad9dd3ce17cd"
+}2023-12-03 19:46:23
+{
+  "code" : "400",
+  "message" : "Failed to handle API - Network Access Authentication Rule : Condition with specified ID was not found in DB: 788f24e8-af00-4c6c-80ed-ad9dd3ce17cd"
+}2023-12-03 20:29:20
+{
+  "version" : "1.0.0",
+  "response" : {
+    "rule" : {
+      "default" : false,
+      "id" : "6cd5889e-fad1-4420-b551-13154ede0e53",
+      "name" : "Authentication Rule 1",
+      "hitCounts" : 0,
+      "rank" : 0,
+      "state" : "enabled",
+      "condition" : {
+        "link" : null,
+        "conditionType" : "ConditionAttributes",
+        "isNegate" : false,
+        "dictionaryName" : "DEVICE",
+        "attributeName" : "Device Type",
+        "operator" : "equals",
+        "dictionaryValue" : null,
+        "attributeValue" : "All Device Types"
+      }
+    },
+    "identitySourceName" : "AD",
+    "ifAuthFail" : "REJECT",
+    "ifUserNotFound" : "REJECT",
+    "ifProcessFail" : "DROP",
+    "link" : {
+      "rel" : "self",
+      "href" : "https://10.48.30.76/api/v1/policy/network-access/policy-set/0563fc32-7b2c-41e3-b948-b2f60ac5987e/authentication/6cd5889e-fad1-4420-b551-13154ede0e53",
+      "type" : "application/json"
+    }
+  }
+}

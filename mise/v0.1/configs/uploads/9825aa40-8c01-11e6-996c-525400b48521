@@ -1,0 +1,14 @@
+{
+  "DownloadableAcl" : {
+    "id" : "9825aa40-8c01-11e6-996c-525400b48521",
+    "name" : "DENY_ALL_IPV4_TRAFFIC",
+    "description" : "Deny all ipv4 traffic",
+    "dacl" : "deny ip any any",
+    "daclType" : "IPV4",
+    "link" : {
+      "rel" : "self",
+      "href" : "https://ise32.taimoorlab.local/ers/config/downloadableacl/9825aa40-8c01-11e6-996c-525400b48521",
+      "type" : "application/json"
+    }
+  }
+}

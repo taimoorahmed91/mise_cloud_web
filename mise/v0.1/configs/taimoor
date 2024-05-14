@@ -1,0 +1,15 @@
+{
+  "Sgt" : {
+    "id" : "934557f0-8c01-11e6-996c-525400b48521",
+    "name" : "Auditors",
+    "description" : "Auditor Security Group",
+    "value" : 19,
+    "generationId" : "0",
+    "propogateToApic" : true,
+    "link" : {
+      "rel" : "self",
+      "href" : "https://172.17.30.2/ers/config/sgt/934557f0-8c01-11e6-996c-525400b48521",
+      "type" : "application/json"
+    }
+  }
+}

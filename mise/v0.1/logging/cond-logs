@@ -1,0 +1,169 @@
+2023-09-14 17:52:16
+{
+  "message" : "request has bad input format in the body",
+  "code" : 400
+}2023-09-14 17:55:20
+{
+  "message" : "request has bad input format in the body",
+  "code" : 400
+}2023-09-14 19:21:20
+{
+  "message" : "name, must match \"^[\\w\\-\\ ]+$\"",
+  "code" : 400
+}2023-09-14 19:29:04
+{
+  "message" : "name, must match \"^[\\w\\-\\ ]+$\"",
+  "code" : 400
+}2023-09-14 19:30:08
+{
+  "message" : "name, must match \"^[\\w\\-\\ ]+$\"",
+  "code" : 400
+}2023-09-14 19:32:06
+{
+  "message" : "name, must match \"^[\\w\\-\\ ]+$\"",
+  "code" : 400
+}2023-09-14 19:33:58
+{
+  "version" : "1.0.0",
+  "response" : {
+    "link" : {
+      "rel" : "self",
+      "href" : "https://172.17.30.2/api/v1/policy/network-access/condition/4ff1968d-c208-4a98-aecb-305e9baba853",
+      "type" : "application/json"
+    },
+    "conditionType" : "LibraryConditionAttributes",
+    "isNegate" : false,
+    "dictionaryName" : "Normalised Radius",
+    "attributeName" : "RadiusFlowType",
+    "operator" : "equals",
+    "dictionaryValue" : null,
+    "attributeValue" : "Wireless802_1x",
+    "name" : "Wireless_8021X",
+    "id" : "4ff1968d-c208-4a98-aecb-305e9baba853",
+    "description" : "A condition to match 802.1X based authentication requests from wireless LAN controllers, according to the corresponding 802.1x attributes defined in the device profile."
+  }
+}2023-09-14 19:35:12
+{
+  "code" : "400",
+  "message" : "Failed to handle API resource request: This name is already used"
+}2023-09-14 19:36:53
+{
+  "version" : "1.0.0",
+  "response" : {
+    "link" : {
+      "rel" : "self",
+      "href" : "https://172.17.30.2/api/v1/policy/network-access/condition/614bba92-b2e7-45a1-9602-61f4db97dd08",
+      "type" : "application/json"
+    },
+    "conditionType" : "LibraryConditionAttributes",
+    "isNegate" : false,
+    "dictionaryName" : "Normalised Radius",
+    "attributeName" : "RadiusFlowType",
+    "operator" : "equals",
+    "dictionaryValue" : null,
+    "attributeValue" : "Wireless802_1x",
+    "name" : "taimoor",
+    "id" : "614bba92-b2e7-45a1-9602-61f4db97dd08",
+    "description" : "A condition to match 802.1X based authentication requests from wireless LAN controllers, according to the corresponding 802.1x attributes defined in the device profile."
+  }
+}2023-09-14 19:38:53
+{
+  "message" : "name, must match \"^[\\w\\-\\ ]+$\"",
+  "code" : 400
+}2023-09-14 19:40:30
+{
+  "message" : "name, must match \"^[\\w\\-\\ ]+$\"",
+  "code" : 400
+}2023-09-14 19:55:37
+{
+  "message" : "name, must match \"^[\\w\\-\\ ]+$\"",
+  "code" : 400
+}2023-09-14 19:55:55
+{
+  "message" : "name, must match \"^[\\w\\-\\ ]+$\"",
+  "code" : 400
+}2023-09-14 19:57:02
+{
+  "message" : "name, must match \"^[\\w\\-\\ ]+$\"",
+  "code" : 400
+}2023-12-03 18:03:34
+{
+  "version" : "1.0.0",
+  "response" : {
+    "link" : {
+      "rel" : "self",
+      "href" : "https://10.48.30.75/api/v1/policy/network-access/condition/8ab52cc2-569a-496c-bb28-93c74da675e7",
+      "type" : "application/json"
+    },
+    "conditionType" : "LibraryConditionAttributes",
+    "isNegate" : false,
+    "dictionaryName" : "DEVICE",
+    "attributeName" : "Device Type",
+    "operator" : "equals",
+    "dictionaryValue" : null,
+    "attributeValue" : "All Device Types#NAD_Group_1",
+    "name" : "Condition_2",
+    "id" : "8ab52cc2-569a-496c-bb28-93c74da675e7",
+    "description" : ""
+  }
+}2023-12-03 18:03:34
+{
+  "version" : "1.0.0",
+  "response" : {
+    "link" : {
+      "rel" : "self",
+      "href" : "https://10.48.30.75/api/v1/policy/network-access/condition/d00df890-9046-49a0-bed2-b83f0ab98ec6",
+      "type" : "application/json"
+    },
+    "conditionType" : "LibraryConditionAttributes",
+    "isNegate" : false,
+    "dictionaryName" : "DEVICE",
+    "attributeName" : "Device Type",
+    "operator" : "equals",
+    "dictionaryValue" : null,
+    "attributeValue" : "All Device Types#NAD_Group_1",
+    "name" : "Condition_3",
+    "id" : "d00df890-9046-49a0-bed2-b83f0ab98ec6",
+    "description" : ""
+  }
+}2023-12-03 18:03:35
+{
+  "version" : "1.0.0",
+  "response" : {
+    "link" : {
+      "rel" : "self",
+      "href" : "https://10.48.30.75/api/v1/policy/network-access/condition/ddd0c5b2-7444-4b24-bb15-94a860d90ad4",
+      "type" : "application/json"
+    },
+    "conditionType" : "LibraryConditionAttributes",
+    "isNegate" : false,
+    "dictionaryName" : "DEVICE",
+    "attributeName" : "Device Type",
+    "operator" : "equals",
+    "dictionaryValue" : null,
+    "attributeValue" : "All Device Types#NAD_Group_1",
+    "name" : "Condition_4",
+    "id" : "ddd0c5b2-7444-4b24-bb15-94a860d90ad4",
+    "description" : ""
+  }
+}2023-12-03 18:03:35
+{
+  "version" : "1.0.0",
+  "response" : {
+    "link" : {
+      "rel" : "self",
+      "href" : "https://10.48.30.75/api/v1/policy/network-access/condition/8245fcf1-161e-4c7a-9f82-e7a21e27d76e",
+      "type" : "application/json"
+    },
+    "conditionType" : "LibraryConditionAttributes",
+    "isNegate" : false,
+    "dictionaryName" : "DEVICE",
+    "attributeName" : "Device Type",
+    "operator" : "equals",
+    "dictionaryValue" : null,
+    "attributeValue" : "All Device Types#NAD_Group_1",
+    "name" : "Condition_5",
+    "id" : "8245fcf1-161e-4c7a-9f82-e7a21e27d76e",
+    "description" : ""
+  }
+}
