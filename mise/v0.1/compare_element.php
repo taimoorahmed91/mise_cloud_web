@@ -24,7 +24,7 @@ if (!isset($_SESSION["username"]) || !isset($_SESSION["role"])) {
 <?php
 if (isset($_GET['id'])) {
     $id = escapeshellarg($_GET['id']);
-    $command = "sudo -S python3 /root/ise-landscape/mise/id_src_dst_compare.py $id";
+    $command = "docker exec misepy /root/ise-landscape/mise/id_src_dst_compare.py $id";
     while (ob_get_level()) {
         ob_end_clean();
     }

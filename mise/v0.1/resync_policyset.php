@@ -28,7 +28,7 @@ if(isset($_GET['id'])) {
     }
 
     // Command to execute inside the Python container
-    $command = "sudo -S docker exec misepy python3 /root/ise-landscape/mise/resync_policyset.py '$href' '$policysetid'";
+    $command = "docker exec misepy python3 /root/ise-landscape/mise/resync_policyset.py '$href' '$policysetid'";
 
     // Execute command using shell_exec
     shell_exec($command);

@@ -9,7 +9,7 @@ if(isset($_GET['mac'])) {
     $mac = $_GET['mac'];
 
     // Command to execute inside the Python container
-    $command = "sudo -S docker exec misepy python3 /root/ise-landscape/mise/coaall.py '$mac'";
+    $command = "docker exec misepy python3 /root/ise-landscape/mise/coaall.py '$mac'";
 
     // Execute command using shell_exec
     shell_exec($command);

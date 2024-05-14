@@ -25,7 +25,7 @@ if (isset($_GET['id'])) {
     $fid = escapeshellarg($_GET['id']); // Escape the argument to prevent command injection
 
     // Command to execute inside the Python container
-    $command = "sudo -S docker exec misepy python3 /root/ise-landscape/mise/overlap.py $fid";
+    $command = "docker exec misepy python3 /root/ise-landscape/mise/overlap.py $fid";
 
     // Execute command using shell_exec
     system($command, $retval);

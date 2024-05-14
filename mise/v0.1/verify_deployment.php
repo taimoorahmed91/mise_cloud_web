@@ -22,7 +22,7 @@ if ($result = $mysqli->query($query)) {
 }
 
 // Command to execute inside the Python container
-$command = "sudo -S docker exec misepy python3 /root/ise-landscape/mise/verify_deployment.py '$fqdn'";
+$command = "docker exec misepy python3 /root/ise-landscape/mise/verify_deployment.py '$fqdn'";
 $output = shell_exec($command);
 
 // Set default alert class and message

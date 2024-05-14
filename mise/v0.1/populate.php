@@ -39,9 +39,9 @@ if ($result = $mysqli->query($query)) {
 
             // Execute the Python script
             if ($scriptName === "policyset_data") {
-                $command = "sudo -S python3 /root/ise-landscape/mise/{$scriptName}.py " . escapeshellarg($fqdn) . " " . $id;
+                $command = "docker exec misepy python3 /root/ise-landscape/mise/{$scriptName}.py " . escapeshellarg($fqdn) . " " . $id;
             } else {
-                $command = "sudo -S python3 /root/ise-landscape/mise/{$scriptName}.py " . escapeshellarg($fqdn);
+                $command = "docker exec misepy python3 /root/ise-landscape/mise/{$scriptName}.py " . escapeshellarg($fqdn);
             }
             system($command);
 
@@ -64,7 +64,7 @@ if ($result = $mysqli->query($query)) {
         $policysetid = $row['policysetid'];
         $policyset = $row['policyset'];
 
-        system("sudo -S python3 /root/ise-landscape/mise/authentication.py '$isename' '$policysetid' '$policyset'");
+        system("python3 /root/ise-landscape/mise/authentication.py '$isename' '$policysetid' '$policyset'");
     }
     // Free Result set
     $result->close();
@@ -81,7 +81,7 @@ if ($result = $mysqli->query($query)) {
         $policysetid = $row['policysetid'];
         $policyset = $row['policyset'];
 
-        system("sudo -S python3 /root/ise-landscape/mise/authorization.py '$isename' '$policysetid' '$policyset'");
+        system("python3 /root/ise-landscape/mise/authorization.py '$isename' '$policysetid' '$policyset'");
     }
     // Free Result set
     $result->close();
@@ -90,10 +90,10 @@ if ($result = $mysqli->query($query)) {
 
 
 ### script to set fetched to yes
-system("sudo -S python3 /root/ise-landscape/mise/fetched_yes.py $id"); 
+system("python3 /root/ise-landscape/mise/fetched_yes.py $id"); 
 
 ### script to send wenex after completion
-system("sudo -S python3 /root/ise-landscape/mise/webex-populate.py $id");
+system("python3 /root/ise-landscape/mise/webex-populate.py $id");
 
 ### script to cleanup inheritit
 //Create the select query

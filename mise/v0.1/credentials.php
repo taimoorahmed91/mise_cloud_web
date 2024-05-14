@@ -18,7 +18,7 @@ if($_POST){
     $mysqli->query($query);
 
     // Command to execute inside the Python container
-    $command = "sudo -S docker exec misepy python3 /root/ise-landscape/mise/headers.py";
+    $command = "docker exec misepy python3 /root/ise-landscape/mise/headers.py";
 
     // Execute command using shell_exec
     shell_exec($command);

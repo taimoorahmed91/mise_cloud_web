@@ -7,7 +7,7 @@ include('tracker.php');
 // Assign get variable (Not used in this script)
 
 // Command to execute inside the Python container
-$command = "sudo -S docker exec misepy python3 /root/ise-landscape/mise/repo-check.py";
+$command = "docker exec misepy python3 /root/ise-landscape/mise/repo-check.py";
 
 // Execute command using shell_exec
 $output = shell_exec($command);

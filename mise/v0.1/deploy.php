@@ -19,7 +19,7 @@ if ($result->num_rows > 0) {
         echo $fqdn;
         
         // Command to execute inside the Python container for deployment
-        $command = "sudo -S docker exec misepy python3 /root/ise-landscape/mise/deploy.py '$fqdn'";
+        $command = "docker exec misepy python3 /root/ise-landscape/mise/deploy.py '$fqdn'";
         
         // Execute command using shell_exec
         shell_exec($command);
@@ -29,10 +29,10 @@ if ($result->num_rows > 0) {
     $result->close();
 
     // Execute other Python scripts
-    system("sudo -S docker exec misepy python3 /root/ise-landscape/mise/deployment_journal.py");
-    system("sudo -S docker exec misepy python3 /root/ise-landscape/mise/clear_queue.py");
-    system("sudo -S docker exec misepy python3 /root/ise-landscape/mise/clear_deployment.py");
-    system("sudo -S docker exec misepy python3 /root/ise-landscape/mise/webex-alert.py");
+    system("docker exec misepy python3 /root/ise-landscape/mise/deployment_journal.py");
+    system("docker exec misepy python3 /root/ise-landscape/mise/clear_queue.py");
+    system("docker exec misepy python3 /root/ise-landscape/mise/clear_deployment.py");
+    system("docker exec misepy python3 /root/ise-landscape/mise/webex-alert.py");
 
 } else {
     // No deployments found

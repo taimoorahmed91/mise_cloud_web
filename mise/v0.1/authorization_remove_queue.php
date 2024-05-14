@@ -9,7 +9,7 @@ if(isset($_GET['id'])) {
     $id = $_GET['id'];
 
     // Command to execute inside the Python container
-    $command = "sudo -S docker exec misepy python3 /root/ise-landscape/mise/authorization_remove_queue.py $id";
+    $command = "docker exec misepy python3 /root/ise-landscape/mise/authorization_remove_queue.py $id";
 
     // Execute command using shell_exec
     shell_exec($command);

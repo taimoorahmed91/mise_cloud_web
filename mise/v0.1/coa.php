@@ -10,7 +10,7 @@ if(isset($_GET['mac']) && isset($_GET['ise'])) {
     $ise = $_GET['ise'];
 
     // Command to execute inside the Python container
-    $command = "sudo -S docker exec misepy python3 /root/ise-landscape/mise/coa.py '$ise' '$mac'";
+    $command = "docker exec misepy python3 /root/ise-landscape/mise/coa.py '$ise' '$mac'";
 
     // Execute command using shell_exec
     shell_exec($command);
