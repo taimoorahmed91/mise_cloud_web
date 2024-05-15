@@ -1,5 +1,8 @@
-<?php include('includes/database.php'); ?>
-<?php include('tracker.php'); ?>
+<?php
+ob_start();
+session_start();
+include('includes/database.php');
+include('tracker.php'); ?>
 <?php
 $scripts = array("dacl_data", "nad_data", "ap_data", "authz_data", "sgt_data", "policyset_data", "condition_data", "nodes");
 $relativeUrl = "/mise/v0.1/deployments.php";
@@ -35,7 +38,6 @@ if ($result = $mysqli->query($query)) {
     // Free Result set
     $result->close();
 }
-
 // Script to fetch policyset authentication
 $query = "SELECT * FROM policyset WHERE inheritid = $id";
 $result = $mysqli->query($query) or die($mysqli->error.__LINE__);

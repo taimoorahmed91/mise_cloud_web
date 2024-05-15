@@ -1,6 +1,8 @@
-<?php include('includes/database.php'); ?>
-<?php include('tracker.php'); ?>
 <?php
+ob_start();
+session_start();
+include('includes/database.php');
+include('tracker.php'); 
 session_start();
 if (!isset($_SESSION["login"])) {
     header("location: login.php");
