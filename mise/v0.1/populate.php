@@ -1,16 +1,14 @@
+
 <?php include('includes/database.php'); ?>
 <?php include('tracker.php'); ?>
 
 <?php
 $scripts = array("dacl_data", "nad_data", "ap_data", "authz_data", "sgt_data", "policyset_data", "condition_data", "nodes");
 
-
 $relativeUrl = "/mise/v0.1/deployments.php";
 header("refresh:0.1;url=$relativeUrl");
 
-
 //header( "refresh:1;url=http://10.48.30.213/landscape/deployments.php" );
-
 
 $id = $_GET['id'];
 
@@ -27,26 +25,14 @@ if ($result = $mysqli->query($query)) {
 
         // Execute each script
         foreach ($scripts as $scriptName) {
-            $lockFilePath = __DIR__ . '/locks/' . $scriptName . '.lock';
-
-            // Check if the lock file exists
-            if (file_exists($lockFilePath)) {
-                die("Another instance of '{$scriptName}' is already running.");
-            }
-
-            // Create the lock file
-            file_put_contents($lockFilePath, '');
-
-            // Execute the Python script
+            // Command to execute inside the Python container
             if ($scriptName === "policyset_data") {
                 $command = "docker exec misepy python3 /root/ise-landscape/mise/{$scriptName}.py " . escapeshellarg($fqdn) . " " . $id;
             } else {
                 $command = "docker exec misepy python3 /root/ise-landscape/mise/{$scriptName}.py " . escapeshellarg($fqdn);
             }
-            system($command);
-
-            // Delete the lock file
-            unlink($lockFilePath);
+            // Execute command using shell_exec
+            shell_exec($command);
         }
     }
     // Free Result set
@@ -64,7 +50,10 @@ if ($result = $mysqli->query($query)) {
         $policysetid = $row['policysetid'];
         $policyset = $row['policyset'];
 
-        system("python3 /root/ise-landscape/mise/authentication.py '$isename' '$policysetid' '$policyset'");
+        // Command to execute inside the Python container
+        $command = "docker exec misepy python3 /root/ise-landscape/mise/authentication.py '$isename' '$policysetid' '$policyset'";
+        // Execute command using shell_exec
+        shell_exec($command);
     }
     // Free Result set
     $result->close();
@@ -81,27 +70,29 @@ if ($result = $mysqli->query($query)) {
         $policysetid = $row['policysetid'];
         $policyset = $row['policyset'];
 
-        system("python3 /root/ise-landscape/mise/authorization.py '$isename' '$policysetid' '$policyset'");
+        // Command to execute inside the Python container
+        $command = "docker exec misepy python3 /root/ise-landscape/mise/authorization.py '$isename' '$policysetid' '$policyset'";
+        // Execute command using shell_exec
+        shell_exec($command);
     }
     // Free Result set
     $result->close();
 }
 
+// Script to set fetched to yes
+$command = "docker exec misepy python3 /root/ise-landscape/mise/fetched_yes.py $id";
+// Execute command using shell_exec
+shell_exec($command);
 
+// Script to send webex after completion
+$command = "docker exec misepy python3 /root/ise-landscape/mise/webex-populate.py $id";
+// Execute command using shell_exec
+shell_exec($command);
 
-### script to set fetched to yes
-system("python3 /root/ise-landscape/mise/fetched_yes.py $id"); 
+// Script to cleanup inheritid
+$query = "UPDATE policyset set inheritid = NULL";
+$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
+// Free Result set
+$result->close();
 
-### script to send wenex after completion
-system("python3 /root/ise-landscape/mise/webex-populate.py $id");
-
-### script to cleanup inheritit
-//Create the select query
-  $query ="UPDATE policyset set inheritid = NULL ";
-  //Get results
-    $result = $mysqli->query($query) or die($mysqli->error.__LINE__);
-                //Free Result set
-             
-             
 ?>
-
