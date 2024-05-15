@@ -1,10 +1,7 @@
-
 <?php include('includes/database.php'); ?>
 <?php include('tracker.php'); ?>
-
 <?php
 $scripts = array("dacl_data", "nad_data", "ap_data", "authz_data", "sgt_data", "policyset_data", "condition_data", "nodes");
-
 $relativeUrl = "/mise/v0.1/deployments.php";
 header("refresh:0.1;url=$relativeUrl");
 

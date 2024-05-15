@@ -1,13 +1,11 @@
 <?php include('includes/database.php'); ?>
 <?php include('tracker.php'); ?>
-
 <?php
 session_start();
 if (!isset($_SESSION["login"])) {
     header("location: login.php");
     exit();
 }
-
 // Check if the username and role are set in the session
 if (!isset($_SESSION["username"]) || !isset($_SESSION["role"])) {
     // Handle the case when the username or role is not set (optional)
@@ -33,18 +31,13 @@ if (!isset($_SESSION["username"]) || !isset($_SESSION["role"])) {
     $cubes = 0; // Default value if no data is found
   }
 ?>
-
 <?php
-
 // Define the number of rows per page
 $rowsPerPage = 10;
-
 // Calculate the current page number
 $pageNumber = isset($_GET['page']) ? $_GET['page'] : 1;
-
 // Calculate the offset
 $offset = ($pageNumber - 1) * $rowsPerPage;
-
   //Create the select query
   $query ="SELECT * FROM deployments ORDER BY id LIMIT $rowsPerPage OFFSET $offset";
   //Get results
