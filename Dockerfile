@@ -23,7 +23,7 @@ COPY ./certs/selfsigned.key /etc/ssl/private/selfsigned.key
 COPY ./default-ssl.conf /etc/apache2/sites-available/default-ssl.conf
 
 # Copy the application files
-COPY mise /var/www/html
+COPY mise /var/www/html/mise
 
 # Change the ownership of the copied files to www-data
 RUN chown -R www-data:www-data /var/www/html
