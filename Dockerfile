@@ -7,8 +7,10 @@ RUN apt-get update && apt-get install -y \
     docker.io && \
     docker-php-ext-install mysqli && \
     docker-php-ext-enable mysqli && \
-    a2enmod ssl && \
-    a2ensite default-ssl 000-default
+    a2enmod ssl rewrite && \
+    a2ensite default-ssl && \
+    a2ensite 000-default
+
 
 # Ensure docker is in the PATH
 ENV PATH="/usr/bin:${PATH}"
