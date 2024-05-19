@@ -21,6 +21,7 @@ RUN groupadd -g 988 docker || true && \
 COPY ./certs/selfsigned.crt /etc/ssl/certs/selfsigned.crt
 COPY ./certs/selfsigned.key /etc/ssl/private/selfsigned.key
 COPY ./default-ssl.conf /etc/apache2/sites-available/default-ssl.conf
+COPY ./000-default.conf /etc/apache2/sites-available/000-default.conf
 
 # Copy the application files
 COPY mise /var/www/html/mise
